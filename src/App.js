@@ -18,7 +18,7 @@ function App() {
 
   //Toggle the color of application
   const toggleMode = () => {
-    if (mode === 'light') {
+   if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#04264a';
       showAlert('Dark mode is enabled', 'success');
@@ -29,45 +29,27 @@ function App() {
       showAlert('Light mode is enabled', 'success');
     }
   }
+   
 
   const grayTheme = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#343a40';
-      showAlert('Gray theme is enabled', 'success');
-    }
-    else {
-      document.body.style.backgroundColor = '#343a40';
-      showAlert('Gray theme is enabled', 'success');
-    }
+
+    document.body.style.backgroundColor = '#343a40';
+    showAlert('Gray theme is enabled', 'success');
+    
 
   }
 
   const cyanTheme = () => {
 
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#055160';
-      showAlert('Cyan theme is enabled', 'success');
-    }
-    else {
-      document.body.style.backgroundColor = '#055160';
-      showAlert('Cyan theme is enabled', 'success');
-    }
+    document.body.style.backgroundColor = '#055160';
+    showAlert('Cyan theme is enabled', 'success');
+    
 
   }
 
   const indigoTheme = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#290661';
-      showAlert('Indigo theme is enabled', 'success');
-    }
-    else {
-      document.body.style.backgroundColor = '#290661';
-      showAlert('Indigo theme is enabled', 'success');
-
-    }
+    document.body.style.backgroundColor = '#290661';
+    showAlert('Indigo theme is enabled', 'success');
   }
 
   const showAlert = (message, type) => {
@@ -76,7 +58,6 @@ function App() {
       type: type
     });
     setTimeout(() => {
-      console.log("Hello world!0")
       setAlert(null);
     }, 1000)
   }
